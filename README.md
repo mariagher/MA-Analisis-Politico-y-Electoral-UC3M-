@@ -1,5 +1,7 @@
 # MA-Analisis-Politico-y-Electoral-UC3M-
 
+# **Asignatura: Visualización y presentación de datos** 
+
 ```{r, warning=F, message=F, echo=FALSE}
 library(tidyverse)
 library(googlesheets4)
@@ -10,13 +12,13 @@ library(ggplot2)
 remotes::install_github("tidyverse/ggplot2")
 ```
 
-# **1. Cargamos dataset**
+### **1. Cargamos dataset**
 ```{r,  warning=F, message=F}
 url <- "https://docs.google.com/spreadsheets/d/1xMbcOz-ldPW-82MAmRzdpnr_bkc0e1LYianLKwpor5E/edit#gid=362203764"
 riqueza_df <- googlesheets4::read_sheet(url, sheet= "riqueza_neta") %>% janitor::clean_names()
 ```
 
-**Para el gráfico en R usaré theme_fivethirtyeight, pero cambiando el fondo gris por uno blanco**
+#### **Para el gráfico en R usaré theme_fivethirtyeight, pero cambiando el fondo gris por uno blanco**
 ```{r}
 theme_fivethirtyeight <- function(base_size = 11, base_family = "") {
   theme_gray(base_size = base_size, base_family = base_family) %+replace%
@@ -24,7 +26,7 @@ theme_fivethirtyeight <- function(base_size = 11, base_family = "") {
 }
 ```
 
-# **2. Creamos gráfico en R**
+### **2. Creamos gráfico en R**
 ```{r, warning=FALSE}
 ejercicio1 <- riqueza_df%>%
   ggplot() + 

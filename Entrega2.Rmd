@@ -86,7 +86,3 @@ ejercicio1 + theme(plot.title = element_text(face = "bold", colour = "black", si
                    panel.grid.major = element_line(color = 'gray', linetype = 'dotted'), 
                    plot.caption = element_text(face="bold", size=9))
 ```
-
-# **2. Adjunto gráfico en Datawrapper**
-
-<https://www.datawrapper.de/_/DOtr1/>
